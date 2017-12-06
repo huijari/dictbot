@@ -1,7 +1,6 @@
 const { Map } = require('immutable')
 
 const actions = require('../actions')
-const { merge } = require('../utils')
 
 const setEntry = (state, { user, name, message }) => {
   const entries = state.get(user) || Map()
