@@ -2,10 +2,8 @@ const { Map } = require('immutable')
 
 const actions = require('../actions')
 
-const setEntry = (state, { user, name, message }) => {
-  const entries = state.get(user) || Map()
-  return state.set(user, entries.set(name, message))
-}
+const setEntry = (state, { user, name, message }) =>
+  state.setIn([user, name], message)
 
 const removeEntry = (state, { user, name }) => {
   const entries = state.get(user)
