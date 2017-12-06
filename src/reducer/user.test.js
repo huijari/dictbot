@@ -3,7 +3,7 @@ const { Map } = require('immutable')
 const actions = require('../actions')
 const reducer = require('./user')
 
-describe('reducer', () => {
+describe('user reducer', () => {
   describe('setEntry', () => {
     it('should create an entry', () => {
       const state = Map()
