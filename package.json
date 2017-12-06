@@ -5,14 +5,12 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "prettier": "prettier --write src/**/*.js"
+    "prettier": "prettier --write src/*.js src/*/*.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2",
     "immutable": "^3.8.2",
-    "node-fetch": "^1.7.3",
     "redux": "^3.7.2"
   },
   "devDependencies": {
