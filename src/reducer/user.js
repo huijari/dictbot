@@ -5,11 +5,7 @@ const actions = require('../actions')
 const setEntry = (state, { user, name, message }) =>
   state.setIn([user, name], message)
 
-const removeEntry = (state, { user, name }) => {
-  const entries = state.get(user)
-  if (entries) return state.set(user, entries.delete(name))
-  return state
-}
+const removeEntry = (state, { user, name }) => state.deleteIn([user, name])
 
 const reducer = (state, action) => {
   switch (action.type) {
