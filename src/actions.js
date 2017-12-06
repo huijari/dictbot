@@ -28,14 +28,6 @@ const removeChatEntry = (chat, name) => ({
   name
 })
 
-const GET_ENTRY = 'GET_ENTRY'
-const getEntry = (user, chat, name) => ({
-  type: GET_ENTRY,
-  user,
-  chat,
-  name
-})
-
 module.exports = {
   SET_ENTRY,
   setEntry,
@@ -44,7 +36,5 @@ module.exports = {
   REMOVE_ENTRY,
   removeEntry,
   REMOVE_CHAT_ENTRY,
-  removeChatEntry,
-  GET_ENTRY,
-  getEntry
+  removeChatEntry
 }
