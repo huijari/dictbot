@@ -36,4 +36,36 @@ describe('handler', () => {
       })
     })
   })
+  describe('/remove!', () => {
+    it('should return a removeEntry action', () => {
+      const { action, command } = handler({
+        from: {
+          id: 0
+        },
+        text: '/remove! name'
+      })
+      expect(action).toMatchObject({
+        type: actions.REMOVE_ENTRY,
+        user: 0,
+        name: 'name'
+      })
+      expect(command).toBeUndefined()
+    })
+    it('should display the help text if args dont match', () => {
+      const { action, command } = handler({
+        id: 0,
+        chat: {
+          id: 1
+        },
+        text: '/remove!'
+      })
+      expect(action).toBeUndefined()
+      expect(command).toMatchObject({
+        type: bot.REPLY,
+        chat: 1,
+        message: 0,
+        content: 'Wrong number of arguments, usage: /remove! name'
+      })
+    })
+  })
 })

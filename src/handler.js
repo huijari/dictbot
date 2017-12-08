@@ -19,11 +19,29 @@ const setEntry = ({ id, chat, from, text }) => {
   return { action }
 }
 
+const removeEntry = ({ id, chat, from, text }) => {
+  const parts = text.split(' ')
+
+  if (parts.length < 2) {
+    const command = bot.reply(
+      chat.id,
+      id,
+      'Wrong number of arguments, usage: /remove! name'
+    )
+    return { command }
+  }
+
+  const name = parts[1]
+  const action = actions.removeEntry(from.id, name)
+  return { action }
+}
+
 const handler = message => {
   const text = message.text
   if (!text) return
 
   if (text.startsWith('/set!')) return setEntry(message)
+  else if (text.startsWith('/remove!')) return removeEntry(message)
 }
 
 module.exports = handler
