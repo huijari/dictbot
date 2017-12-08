@@ -1,10 +1,11 @@
 const actions = require('./actions.js')
+const bot = require('./bot.js')
 const handler = require('./handler.js')
 
 describe('handler', () => {
   describe('/set!', () => {
     it('should return a setEntry action', () => {
-      const { action, bot } = handler({
+      const { action, command } = handler({
         from: {
           id: 0
         },
@@ -16,7 +17,23 @@ describe('handler', () => {
         name: 'name',
         message: 'the message'
       })
-      expect(bot).toBeUndefined()
+      expect(command).toBeUndefined()
+    })
+    it('should display the help text if args dont match', () => {
+      const { action, command } = handler({
+        id: 0,
+        chat: {
+          id: 1
+        },
+        text: '/set! name'
+      })
+      expect(action).toBeUndefined()
+      expect(command).toMatchObject({
+        type: bot.REPLY,
+        chat: 1,
+        message: 0,
+        content: 'Wrong number of arguments, usage: /set! name message'
+      })
     })
   })
 })
