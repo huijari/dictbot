@@ -1,16 +1,16 @@
 const SEND = 'SEND'
-const send = (chat, message) => ({
+const send = (chat, text) => ({
   type: SEND,
   chat,
-  message
+  text
 })
 
 const REPLY = 'REPLY'
-const reply = (chat, message, content) => ({
+const reply = (chat, message, text) => ({
   type: REPLY,
   chat,
   message,
-  content
+  text
 })
 
 module.exports = {

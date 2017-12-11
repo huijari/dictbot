@@ -32,7 +32,7 @@ describe('chat handler', () => {
         type: bot.REPLY,
         chat: 1,
         message: 0,
-        content: 'Wrong number of arguments, usage: /set!! name message'
+        text: 'Wrong number of arguments, usage: /set!! name message'
       })
     })
   })
@@ -64,7 +64,7 @@ describe('chat handler', () => {
         type: bot.REPLY,
         chat: 1,
         message: 0,
-        content: 'Wrong number of arguments, usage: /remove!! name'
+        text: 'Wrong number of arguments, usage: /remove!! name'
       })
     })
   })
