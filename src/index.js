@@ -1,5 +1,5 @@
 const { createStore } = require('redux')
-const { fetch } = require('node-fetch')
+const fetch = require('node-fetch')
 const { json } = require('micro')
 const { Map } = require('immutable')
 
