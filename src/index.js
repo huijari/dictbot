@@ -11,7 +11,7 @@ const store = createStore(reducer)
 const handler = handle(store)
 const dispatchCommand = dispatch({
   fetch,
-  token: process.ENV['BOT_TOKEN']
+  token: process.env['BOT_TOKEN']
 })
 
 const app = async (req, res) => {
