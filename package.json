@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "micro-dev",
     "test": "jest",
+    "watch-test": "jest --watch",
     "prettier": "prettier --write src/*.js src/*/*.js"
   },
   "author": "",
