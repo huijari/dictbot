@@ -19,6 +19,7 @@ const app = async (req, res) => {
   const result = handler(update.message)
   if (result.action) store.dispatch(result.action)
   if (result.command) dispatchCommand(result.command)
+  console.log(result)
   return result
 }
 
