@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "micro-dev",
     "prettier": "prettier --write src/*.js src/*/*.js",
-    "start": "micro",
+    "start": "micro -p $PORT",
     "test": "jest",
     "watch-test": "jest --watch"
   },
