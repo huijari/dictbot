@@ -1,3 +1,22 @@
-const handler = () => 'dictbot!'
+const { json } = require('micro')
+const { Map } = require('immutable')
 
-module.exports = handler
+const handle = require('./handler')
+
+const state = Map({
+  user: Map({
+    3: Map({
+      name: 'message'
+    })
+  }),
+  chat: Map()
+})
+
+const app = async (req, res) => {
+  const update = await json(req)
+  return handle({
+    getState: () => state
+  })(update.message)
+}
+
+module.exports = app

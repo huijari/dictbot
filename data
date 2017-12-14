@@ -1,0 +1,13 @@
+{
+  "update_id": 1,
+  "message": {
+    "message_id": 2,
+    "from": {
+      "id": 3
+    },
+    "chat": {
+      "id": -4
+    },
+    "text": "!name"
+  }
+}
