@@ -3,8 +3,7 @@ const chatHandler = require('./chat.js')
 const bangHandler = require('./bang.js')
 
 const reducer = message => (result, handler) => {
-  if (result.action || result.command)
-    return result
+  if (result.action || result.command) return result
   return handler(message)
 }
 
