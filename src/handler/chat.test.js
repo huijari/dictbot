@@ -68,4 +68,9 @@ describe('chat handler', () => {
       })
     })
   })
+  it('should do nothing when the message doesnt have a text', () => {
+    const { action, command } = handler({})
+    expect(action).toBeUndefined()
+    expect(command).toBeUndefined()
+  })
 })

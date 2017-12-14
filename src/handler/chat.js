@@ -38,7 +38,7 @@ const removeChatEntry = ({ id, chat, text }) => {
 
 const handler = message => {
   const text = message.text
-  if (!text) return
+  if (!text) return {}
 
   if (text.startsWith('/set!!')) return setChatEntry(message)
   if (text.startsWith('/remove!!')) return removeChatEntry(message)
