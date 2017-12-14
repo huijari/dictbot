@@ -5,14 +5,16 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "micro-dev",
+    "prettier": "prettier --write src/*.js src/*/*.js",
+    "start": "micro",
     "test": "jest",
-    "watch-test": "jest --watch",
-    "prettier": "prettier --write src/*.js src/*/*.js"
+    "watch-test": "jest --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "immutable": "^3.8.2",
+    "micro": "^9.0.2",
     "redux": "^3.7.2"
   },
   "devDependencies": {
