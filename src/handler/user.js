@@ -42,6 +42,8 @@ const handler = message => {
 
   if (text.startsWith('/set!')) return setEntry(message)
   if (text.startsWith('/remove!')) return removeEntry(message)
+
+  return {}
 }
 
 module.exports = handler

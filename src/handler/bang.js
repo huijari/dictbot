@@ -1,12 +1,11 @@
 const bot = require('../bot')
 
-const handler = store => ({ text, from, chat }) => {
+const handler = ({ getState }) => ({ text, from, chat }) => {
   if (!text || !text.startsWith('!')) return {}
 
   const key = text.substring(1)
 
-  const chatMessage = store
-    .getState()
+  const chatMessage = getState()
     .get('chat')
     .get(chat.id)
     .get(key)
@@ -16,8 +15,7 @@ const handler = store => ({ text, from, chat }) => {
     return { command }
   }
 
-  const userMessage = store
-    .getState()
+  const userMessage = getState()
     .get('user')
     .get(from.id)
     .get(key)

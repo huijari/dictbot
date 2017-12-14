@@ -73,4 +73,11 @@ describe('user handler', () => {
     expect(action).toBeUndefined()
     expect(command).toBeUndefined()
   })
+  it('should do nothing when the message doesnt match', () => {
+    const { action, command } = handler({
+      text: '/nothing'
+    })
+    expect(action).toBeUndefined()
+    expect(command).toBeUndefined()
+  })
 })

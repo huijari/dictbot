@@ -89,7 +89,14 @@ describe('bang handler', () => {
     })
   })
   it('should do nothing when the message doesnt have a text', () => {
-    const { action, command } = handler({})
+    const { action, command } = handler(store)({})
+    expect(action).toBeUndefined()
+    expect(command).toBeUndefined()
+  })
+  it('should do nothing when the message doesnt match', () => {
+    const { action, command } = handler(store)({
+      text: '/nothing'
+    })
     expect(action).toBeUndefined()
     expect(command).toBeUndefined()
   })

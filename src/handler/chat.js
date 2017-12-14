@@ -42,6 +42,8 @@ const handler = message => {
 
   if (text.startsWith('/set!!')) return setChatEntry(message)
   if (text.startsWith('/remove!!')) return removeChatEntry(message)
+
+  return {}
 }
 
 module.exports = handler
