@@ -1,22 +1,18 @@
+const { createStore } = require('redux')
 const { json } = require('micro')
 const { Map } = require('immutable')
 
 const handle = require('./handler')
+const reducer = require('./reducer')
 
-const state = Map({
-  user: Map({
-    3: Map({
-      name: 'message'
-    })
-  }),
-  chat: Map()
-})
+const store = createStore(reducer)
+const handler = handle(store)
 
 const app = async (req, res) => {
   const update = await json(req)
-  return handle({
-    getState: () => state
-  })(update.message)
+  const result = handler(update.message)
+  if (result.action) store.dispatch(result.action)
+  return result
 }
 
 module.exports = app
