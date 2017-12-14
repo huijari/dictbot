@@ -7,7 +7,7 @@ const setEntry = (state, { user, name, message }) =>
 
 const removeEntry = (state, { user, name }) => state.deleteIn([user, name])
 
-const reducer = (state, action) => {
+const reducer = (state = Map(), action) => {
   switch (action.type) {
     case actions.SET_ENTRY:
       return setEntry(state, action)

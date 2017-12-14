@@ -7,7 +7,7 @@ const setChatEntry = (state, { chat, name, message }) =>
 
 const removeChatEntry = (state, { chat, name }) => state.deleteIn([chat, name])
 
-const reducer = (state, action) => {
+const reducer = (state = Map(), action) => {
   switch (action.type) {
     case actions.SET_CHAT_ENTRY:
       return setChatEntry(state, action)
