@@ -14,7 +14,7 @@ const reply = (chat, message, text) => ({
 })
 
 const request = ({ fetch, token }, method, params) =>
-  fetch(`api.telegram.org/bot${token}/${method}?${params}`)
+  fetch(`https://api.telegram.org/bot${token}/${method}?${params}`)
 const requestSendd = (conf, { chat, text }) =>
   request(conf, 'sendMessage', `chat_id=${chat}&text=${text}`)
 const requestReply = (conf, { chat, message, text }) =>
