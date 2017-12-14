@@ -40,4 +40,15 @@ describe('chat reducer', () => {
       expect(newState.get('chat').get('prev')).toBeUndefined()
     })
   })
+  it('should not modify the state if the action is unknown', () => {
+    const state = Map({
+      chat: Map({ prev: 'prev' })
+    })
+
+    const newState = reducer(state, {
+      type: 'nothing'
+    })
+
+    expect(newState).toBe(state)
+  })
 })

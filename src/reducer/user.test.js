@@ -40,4 +40,15 @@ describe('user reducer', () => {
       expect(newState.get('user').get('prev')).toBeUndefined()
     })
   })
+  it('should not modify the state if the action is unknown', () => {
+    const state = Map({
+      user: Map({ prev: 'prev' })
+    })
+
+    const newState = reducer(state, {
+      type: 'nothing'
+    })
+
+    expect(newState).toBe(state)
+  })
 })
