@@ -4,21 +4,20 @@ const bot = require('../bot.js')
 const handler = require('./bang.js')
 
 const store = {
-  getState: () =>
-    Map({
+  getState: () => ({
+    chat: Map({
       chat: Map({
-        chat: Map({
-          chat: 'in chat',
-          both: 'both, in chat'
-        })
-      }),
+        chat: 'in chat',
+        both: 'both, in chat'
+      })
+    }),
+    user: Map({
       user: Map({
-        user: Map({
-          user: 'in user',
-          both: 'both, in user'
-        })
+        user: 'in user',
+        both: 'both, in user'
       })
     })
+  })
 }
 
 describe('bang handler', () => {
