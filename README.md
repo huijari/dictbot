@@ -44,7 +44,7 @@ npm run dev
 
 ## Deployment
 
-For deployment you need to set two environment variables, `PORT` in with the server will run, and `BOT_TOKEN` with is the Telegram token of your bot. To start the server use:
+For deployment you need to set two environment variables, `PORT` in which the server will run, and `BOT_TOKEN` which is the Telegram token of your bot. To start the server use:
 
 ```sh
 npm start
