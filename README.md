@@ -1,6 +1,6 @@
 # dictbot
 
-[![Build Status](https://travis-ci.org/huijari/dictbot.svg?branch=master)](https://travis-ci.org/huijari/dictbot)[![license](https://img.shields.io/github/license/huijari/dictbot.svg)]()
+[![Build Status](https://travis-ci.org/huijari/dictbot.svg?branch=master)] (https://travis-ci.org/huijari/dictbot)[![license](https://img.shields.io/github/license/huijari/dictbot.svg)]()
 
 Experiment of using redux in the backend
 
@@ -59,4 +59,4 @@ And others that you can check in the [package.json](package.json) file.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
