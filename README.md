@@ -1,6 +1,6 @@
 # dictbot
 
-[![Build Status](https://travis-ci.org/huijari/dictbot.svg?branch=master)] (https://travis-ci.org/huijari/dictbot)[![license](https://img.shields.io/github/license/huijari/dictbot.svg)]()
+[![Build Status](https://travis-ci.org/huijari/dictbot.svg?branch=master)](https://travis-ci.org/huijari/dictbot)[![license] (https://img.shields.io/github/license/huijari/dictbot.svg)]()
 
 Experiment of using redux in the backend
 
