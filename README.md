@@ -7,7 +7,7 @@ Experiment of using redux in the backend
 
 ## Getting Started
 
-dictbot is a dictionary/snippet bot for Telegram.
+dictbot is a dictionary/snippet [bot](https://core.telegram.org/bots) for [Telegram](https://telegram.org).
 
 These instructions will get you a copy of the project on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
@@ -28,7 +28,7 @@ npm install
 
 ## Running the tests
 
-The project has a npm script for running the tests with Jest:
+The project has a npm script for running the tests with [jest](https://github.com/facebook/jest):
 
 ```sh
 npm test
@@ -36,7 +36,7 @@ npm test
 
 ## Devlopment
 
-You can start the devlopment server, that uses micro-dev, using:
+You can start the devlopment server, that uses [micro-dev](https://github.com/zeit/micro-dev), using:
 
 ```sh
 npm run dev
