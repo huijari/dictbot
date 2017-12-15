@@ -1,7 +1,7 @@
 {
   "name": "dictbot",
   "version": "1.0.0",
-  "description": "",
+  "description": "dictionary/snippet bot for Telegram",
   "main": "src/index.js",
   "scripts": {
     "dev": "micro-dev",
@@ -10,8 +10,8 @@
     "test": "jest",
     "watch-test": "jest --watch"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Alexandre Cesar",
+  "license": "MIT",
   "dependencies": {
     "immutable": "^3.8.2",
     "micro": "^9.0.2",
